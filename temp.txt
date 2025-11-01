@@ -1,0 +1,14 @@
+calibrated_I_inphase_4k = I_inphase_4k - I_offset_4k
+calibrated_Q_inphase_4k = Q_inphase_4k - Q_offset_4k
+calibrated_I_quadphase_4k = I_quadphase_4k - I_offset_4k
+calibrated_Q_quadphase_4k = Q_quadphase_4k - Q_offset_4k
+
+I_coef_4k = np.sqrt((np.pow(calibrated_I_inphase_4k, 2) + np.pow(calibrated_I_quadphase_4k)))/250
+Q_coef_4k = np.sqrt((np.pow(calibrated_Q_quadphase_4k, 2) + np.pow(calibrated_Q_quadphase_4k)))/250
+Q_coef_4k = np.sqrt((np.pow(calibrated_I_inphase_4k, 2) + np.pow(calibrated_I_quadphase_4k)))/250
+Q_coef_4k = np.sqrt((np.pow(calibrated_Q_inphase_4k, 2) + np.pow(calibrated_Q_quadphase_4k)))/250
+
+print(calibrated_I_inphase_4k)
+print(calibrated_Q_inphase_4k)
+print(calibrated_I_quadphase_4k)
+print(calibrated_Q_quadphase_4k)
