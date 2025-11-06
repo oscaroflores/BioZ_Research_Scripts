@@ -13,7 +13,7 @@ print("M", M_div)
 
 dac=128
 # f=((32.768e3*M_div)/K_div)/dac
-f=4104
+f=131e3
 print("freq", f)
 
 w = 2*np.pi*f
