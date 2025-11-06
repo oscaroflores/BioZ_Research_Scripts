@@ -47,7 +47,7 @@ headers = [
     "BIOZ_DAC_OSR", "BIOZ_ADC_OSR",
     "I_COEF", "Q_COEF", "I_PHASE_COEF", "Q_PHASE_COEF", "I_OFFSET", "Q_OFFSET"
 ]
-out_path = Path(__file__).with_name(f"SWEEP_MAX30009_calibration_values_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv")
+out_path = Path(__file__).with_name(f"SWEEP_MAX30009_calibration_values_{datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv")
 
 with out_path.open("w", newline="") as fh:
     writer = csv.writer(fh)
