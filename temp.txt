@@ -1,14 +1,19 @@
-calibrated_I_inphase_4k = I_inphase_4k - I_offset_4k
-calibrated_Q_inphase_4k = Q_inphase_4k - Q_offset_4k
-calibrated_I_quadphase_4k = I_quadphase_4k - I_offset_4k
-calibrated_Q_quadphase_4k = Q_quadphase_4k - Q_offset_4k
+I_4k = plt.hist(df_4k_32655["I"], bins=100, alpha=0.5, color="skyblue", edgecolor="black")
+plt.title("I (Ohm) 4k")
+plt.axvline(df_4k_32655["I"].mean(), color='red')
+plt.show(I_4k)
 
-I_coef_4k = np.sqrt((np.pow(calibrated_I_inphase_4k, 2) + np.pow(calibrated_I_quadphase_4k)))/250
-Q_coef_4k = np.sqrt((np.pow(calibrated_Q_quadphase_4k, 2) + np.pow(calibrated_Q_quadphase_4k)))/250
-Q_coef_4k = np.sqrt((np.pow(calibrated_I_inphase_4k, 2) + np.pow(calibrated_I_quadphase_4k)))/250
-Q_coef_4k = np.sqrt((np.pow(calibrated_Q_inphase_4k, 2) + np.pow(calibrated_Q_quadphase_4k)))/250
+Q_4k = plt.hist(df_4k_32655["Q"], bins=100, alpha=0.5, color="yellow", edgecolor="black")
+plt.title("Q (Ohm) 4k")
+plt.axvline(df_4k_32655["Q"].mean(), color='red')
+plt.show()
 
-print(calibrated_I_inphase_4k)
-print(calibrated_Q_inphase_4k)
-print(calibrated_I_quadphase_4k)
-print(calibrated_Q_quadphase_4k)
+I_131k = plt.hist(df_131k_32655["I"], bins=100, alpha=0.5, color="skyblue", edgecolor="black")
+plt.title("I (Ohm) 131k")
+plt.axvline(df_131k_32655["I"].mean(), alpha=0.5, color="red")
+plt.show(I_131k)
+
+Q_131k = plt.hist(df_131k_32655["Q"], bins=100,alpha=0.5,  color="yellow", edgecolor="black")
+plt.title("Q (Ohm) 131k")
+plt.axvline(df_131k_32655["Q"].mean(), color="red")
+plt.show(Q_131k)
